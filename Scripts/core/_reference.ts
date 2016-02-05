@@ -7,6 +7,6 @@
 /// <reference path="../objects/button.ts" />
 /// <reference path="../objects/scene.ts" />
 
-/// <reference path="../scenes/rightcave.ts" />
-/// <reference path="../scenes/leftcave.ts" />
-/// <reference path="../scenes/intro.ts" />
+/// <reference path="../scenes/gameover.ts" />
+/// <reference path="../scenes/slotmachine.ts" />
+/// <reference path="../scenes/menu.ts" />

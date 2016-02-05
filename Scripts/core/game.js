@@ -7,17 +7,12 @@ var stats;
 var currentScene;
 var scene;
 // Game Scenes
-var intro;
-var leftCave;
-var rightCave;
+var menu;
+var slotMachine;
+var gameOver;
 var assetData = [
     { id: "BackButton", src: "../../Assets/images/BackButton.png" },
-    { id: "IntroCave", src: "../../Assets/images/IntroCave.png" },
-    { id: "LeftCave", src: "../../Assets/images/LeftCave.png" },
-    { id: "LeftCaveButton", src: "../../Assets/images/LeftCaveButton.png" },
     { id: "Nextbutton", src: "../../Assets/images/Nextbutton.png" },
-    { id: "RightCave", src: "../../Assets/images/RightCave.png" },
-    { id: "RightCaveButton", src: "../../Assets/images/RightCaveButton.png" },
     { id: "StartButton", src: "../../Assets/images/StartButton.png" },
     { id: "StartOverButton", src: "../../Assets/images/StartOverButton.png" }
 ];
@@ -41,7 +36,7 @@ function init() {
     // sets up our stats counting workflow
     setupStats();
     // set initial scene
-    scene = config.Scene.INTRO;
+    scene = config.Scene.MENU;
     changeScene();
 }
 // Main Game Loop function that handles what happens each "tick" or frame
@@ -68,26 +63,26 @@ function setupStats() {
 function changeScene() {
     // Launch various scenes
     switch (scene) {
-        case config.Scene.INTRO:
+        case config.Scene.MENU:
             // show the MENU scene
             stage.removeAllChildren();
-            intro = new scenes.Intro();
-            currentScene = intro;
-            console.log("Starting INTRO Scene");
+            menu = new scenes.Menu();
+            currentScene = menu;
+            console.log("Starting MENU Scene");
             break;
-        case config.Scene.LEFT_CAVE:
+        case config.Scene.SLOT_MACHINE:
             // show the PLAY scene
             stage.removeAllChildren();
-            leftCave = new scenes.LeftCave();
-            currentScene = leftCave;
-            console.log("Starting LEFT_CAVE Scene");
+            slotMachine = new scenes.SlotMachine();
+            currentScene = slotMachine;
+            console.log("Starting SLOT_MACHINE Scene");
             break;
-        case config.Scene.RIGHT_CAVE:
+        case config.Scene.GAME_OVER:
             // show the game OVER scene
             stage.removeAllChildren();
-            rightCave = new scenes.RightCave();
-            currentScene = rightCave;
-            console.log("Starting RIGHT_CAVE Scene");
+            gameOver = new scenes.GameOver();
+            currentScene = gameOver;
+            console.log("Starting GAME_OVER Scene");
             break;
     }
     console.log(currentScene.numChildren);

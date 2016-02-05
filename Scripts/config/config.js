@@ -4,9 +4,9 @@ var config;
     var Scene = (function () {
         function Scene() {
         }
-        Scene.INTRO = 0;
-        Scene.LEFT_CAVE = 1;
-        Scene.RIGHT_CAVE = 2;
+        Scene.MENU = 0;
+        Scene.SLOT_MACHINE = 1;
+        Scene.GAME_OVER = 2;
         return Scene;
     })();
     config.Scene = Scene;
