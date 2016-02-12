@@ -28,7 +28,7 @@ module scenes {
             this._startOverButton = new objects.Button(
                 "StartButton",
                 config.Screen.CENTER_X,
-                config.Screen.CENTER_Y + 80);
+                config.Screen.CENTER_Y + 80, true);
             this.addChild(this._startOverButton);
             
             // START Button event listener
