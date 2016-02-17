@@ -36,10 +36,10 @@ module scenes {
             this._startButton.on("click", this._startButtonClick, this);
            
             // Setup Background
-            this._setupBackground();
+            this._setupBackground("WhiteBackground");
            
             // FadeIn
-            this._fadeIn();
+            this._fadeIn(500);
            
             
             // add this scene to the global stage container
@@ -57,7 +57,7 @@ module scenes {
         // START Button click event handler
         private _startButtonClick(event: createjs.MouseEvent) {
             //FadeOut 
-            this._fadeOut(() => {
+            this._fadeOut(500, () => {
                 // Switch to the LEFT_CAVE Scene
                 scene = config.Scene.SLOT_MACHINE;
                 changeScene();

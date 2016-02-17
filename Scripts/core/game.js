@@ -20,7 +20,8 @@ var assetData = [
     { id: "Bet10Button", src: "../../Assets/images/Bet10Button.png" },
     { id: "Bet100Button", src: "../../Assets/images/Bet100Button.png" },
     { id: "SpinButton", src: "../../Assets/images/SpinButton.png" },
-    { id: "BlackBackground", src: "../../Assets/images/BlackBackground.png" }
+    { id: "BlackBackground", src: "../../Assets/images/BlackBackground.png" },
+    { id: "WhiteBackground", src: "../../Assets/images/WhiteBackground.png" }
 ];
 function preload() {
     assets = new createjs.LoadQueue();

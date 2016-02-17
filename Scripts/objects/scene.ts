@@ -21,21 +21,21 @@ module objects {
         }
         
         // Setup Background
-        protected _setupBackground(): void {
-            this._blackBackground = new createjs.Bitmap(assets.getResult("BlackBackground"));
+        protected _setupBackground(background:string): void {
+            this._blackBackground = new createjs.Bitmap(assets.getResult(background));
             this.addChild(this._blackBackground);
         }
         
         
         // FadeIn method
-        protected _fadeIn(): void {
-            createjs.Tween.get(this._blackBackground).to({ alpha: 0 }, 500, createjs.Ease.getPowInOut(2));
+        protected _fadeIn(transitionTime:number): void {
+            createjs.Tween.get(this._blackBackground).to({ alpha: 0 }, transitionTime, createjs.Ease.getPowInOut(2));
         }
         
         // FadeIn method
-        protected _fadeOut(callback:any): void {
+        protected _fadeOut(transitionTime:number,callback:any): void {
             this._blackBackground.alpha = 0;
-            createjs.Tween.get(this._blackBackground).to({ alpha: 1 }, 500, createjs.Ease.getPowInOut(2)).call(callback);
+            createjs.Tween.get(this._blackBackground).to({ alpha: 1 }, transitionTime, createjs.Ease.getPowInOut(2)).call(callback);
         }
     }
 }
