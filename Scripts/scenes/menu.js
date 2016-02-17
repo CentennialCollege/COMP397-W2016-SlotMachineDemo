@@ -23,6 +23,10 @@ var scenes;
             this.addChild(this._startButton);
             // START Button event listener
             this._startButton.on("click", this._startButtonClick, this);
+            // Setup Background
+            this._setupBackground();
+            // FadeIn
+            this._fadeIn();
             // add this scene to the global stage container
             stage.addChild(this);
         };
@@ -32,9 +36,12 @@ var scenes;
         //EVENT HANDLERS ++++++++++++++++++++
         // START Button click event handler
         Menu.prototype._startButtonClick = function (event) {
-            // Switch to the LEFT_CAVE Scene
-            scene = config.Scene.SLOT_MACHINE;
-            changeScene();
+            //FadeOut 
+            this._fadeOut(function () {
+                // Switch to the LEFT_CAVE Scene
+                scene = config.Scene.SLOT_MACHINE;
+                changeScene();
+            });
         };
         return Menu;
     })(objects.Scene);
