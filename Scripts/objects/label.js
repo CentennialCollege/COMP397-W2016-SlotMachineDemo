@@ -9,10 +9,12 @@ var objects;
     var Label = (function (_super) {
         __extends(Label, _super);
         // CONSTRUCTOR METHOD +++++++++++++++++++++++++++++++++++
-        function Label(labelString, labelFont, labelColour, x, y) {
+        function Label(labelString, labelFont, labelColour, x, y, isCentered) {
             _super.call(this, labelString, labelFont, labelColour);
-            this.regX = this.getBounds().width * 0.5;
-            this.regY = this.getBounds().height * 0.5;
+            if (isCentered) {
+                this.regX = this.getBounds().width * 0.5;
+                this.regY = this.getBounds().height * 0.5;
+            }
             this.x = x;
             this.y = y;
         }

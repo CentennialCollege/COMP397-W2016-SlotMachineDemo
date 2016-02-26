@@ -22,7 +22,7 @@ module scenes {
                 "60px Consolas",
                 "#000000",
                 config.Screen.CENTER_X,
-                config.Screen.CENTER_Y);
+                config.Screen.CENTER_Y, true);
             this.addChild(this._welcomeLabel);
                    
             // add the START button to the MENU scene
