@@ -5,6 +5,7 @@ module objects {
         public id:string;
         public src: string;
         // CONSTRUCTOR +++++++++++++++++++++
+        
         constructor(id:string, src:string) {
             this.id = id;
             this.src = src;
